@@ -2,4 +2,37 @@
 
 @theme {
   --color-accent: #1c7ed6;
+  --color-ink: #1e293b;
+  --color-tint: #eef2f8;
+  --font-sans: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+}
+
+@theme {
+  --animate-marquee-left: marquee-left 900s linear infinite;
+  --animate-marquee-right: marquee-right 900s linear infinite;
+
+  @keyframes marquee-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none;
+  }
 }
