@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import SiteMenu from "@/components/SiteMenu";
 
 function PatternBackground() {
   return (
@@ -32,15 +32,7 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden bg-white">
       <PatternBackground />
 
-      <header className="absolute top-0 right-0 z-10 px-14 py-9">
-        <button
-          type="button"
-          className="text-ink flex cursor-pointer items-center gap-3 text-[15px] font-semibold"
-        >
-          Menu
-          <Menu size={20} strokeWidth={2.5} aria-hidden />
-        </button>
-      </header>
+      <SiteMenu />
 
       <div className="absolute top-[310px] left-12 z-10">
         <h1 className="text-ink mb-2 leading-none font-extrabold tracking-tighter">

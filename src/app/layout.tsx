@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google";
+import { Instrument_Serif, Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-instrument-serif",
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +24,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
+    <html
+      lang="ja"
+      className={`${inter.variable} ${notoSansJP.variable} ${instrumentSerif.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
