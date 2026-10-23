@@ -54,7 +54,6 @@ export default function SiteMenu() {
           onClick={() => setPhase(isOpen ? "closing" : "open")}
           className="text-ink flex cursor-pointer items-center gap-3 text-[19px] font-semibold"
         >
-          {isOpen ? "Close" : "Menu"}
           {isOpen ? (
             <X size={26} strokeWidth={2.5} aria-hidden />
           ) : (
