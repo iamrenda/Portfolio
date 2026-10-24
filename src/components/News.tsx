@@ -1,8 +1,8 @@
-import { ArrowRight, Award, Code, PenLine } from "lucide-react";
+import { LuArrowRight, LuAward, LuCode, LuPenLine } from "react-icons/lu";
 
 const NEWS = [
   {
-    icon: Code,
+    icon: LuCode,
     chip: "bg-[#3b66a5]",
     image: "bg-[#4a7fd4]",
     date: "2026.10.12",
@@ -11,7 +11,7 @@ const NEWS = [
       "学習時間を記録・集計するREST APIを、設計からテストまで一人で実装して公開しました。",
   },
   {
-    icon: PenLine,
+    icon: LuPenLine,
     chip: "bg-[#222b45]",
     image: "bg-[#3b66a5]",
     date: "2026.10.05",
@@ -20,7 +20,7 @@ const NEWS = [
       "backdrop-filterと半透明の白だけで、ガラスの質感をどこまで再現できるかを試した記録です。",
   },
   {
-    icon: Award,
+    icon: LuAward,
     chip: "bg-[#4a7fd4]",
     image: "bg-[#6c9be0]",
     date: "2026.08.30",
@@ -65,7 +65,7 @@ export default function News() {
               className="border-ink text-ink hover:bg-ink mt-auto flex w-fit cursor-pointer items-center gap-2 self-start border px-5 py-3 text-xs font-semibold transition-colors duration-200 hover:text-white"
             >
               詳細を見る
-              <ArrowRight size={14} aria-hidden />
+              <LuArrowRight size={14} aria-hidden />
             </button>
           </article>
         ))}
@@ -77,7 +77,7 @@ export default function News() {
           className="bg-ink hover:bg-accent flex cursor-pointer items-center gap-3 px-8 py-4 text-sm font-semibold text-white transition-colors duration-200"
         >
           すべてのニュースを見る
-          <ArrowRight size={16} aria-hidden />
+          <LuArrowRight size={16} aria-hidden />
         </button>
       </div>
     </section>

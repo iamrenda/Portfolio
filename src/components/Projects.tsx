@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { LuArrowRight, LuArrowUpRight } from "react-icons/lu";
 
 function DetailButton({ className }: { className: string }) {
   return (
@@ -7,7 +7,7 @@ function DetailButton({ className }: { className: string }) {
       className={`absolute right-7 bottom-7 flex cursor-pointer items-center gap-2 px-4 py-2 text-xs font-semibold opacity-0 transition-opacity duration-200 group-hover:opacity-100 focus-visible:opacity-100 ${className}`}
     >
       詳しく見る
-      <ArrowUpRight size={14} aria-hidden />
+      <LuArrowUpRight size={14} aria-hidden />
     </button>
   );
 }
@@ -88,7 +88,7 @@ export default function Projects() {
             View All
           </h3>
           <span className="text-accent absolute top-7 right-7 flex size-14 items-center justify-center bg-white">
-            <ArrowRight size={22} aria-hidden />
+            <LuArrowRight size={22} aria-hidden />
           </span>
         </a>
       </div>

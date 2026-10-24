@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { LuMenu, LuX } from "react-icons/lu";
 
 const ITEMS = ["Projects", "News", "About Me", "Contact"];
 
@@ -55,9 +55,9 @@ export default function SiteMenu() {
           className="text-ink flex cursor-pointer items-center gap-3 text-[19px] font-semibold"
         >
           {isOpen ? (
-            <X size={26} strokeWidth={2.5} aria-hidden />
+            <LuX size={26} strokeWidth={2.5} aria-hidden />
           ) : (
-            <Menu size={26} strokeWidth={2.5} aria-hidden />
+            <LuMenu size={26} strokeWidth={2.5} aria-hidden />
           )}
         </button>
       </header>
