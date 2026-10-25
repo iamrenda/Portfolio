@@ -19,7 +19,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "@iamrenda のポートフォリオ",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -74,7 +74,7 @@ export default function AboutMe() {
         </a>
         育ち。
         <br />
-        フルスタックエンジニアを目指す学生です。
+        フルスタックエンジニアを目指す大学生です。
       </p>
 
       <div
