@@ -3,28 +3,33 @@ import { FaLinkedin } from "react-icons/fa6";
 import { LuArrowUpRight } from "react-icons/lu";
 import { SiGithub, SiGmail, SiWantedly } from "react-icons/si";
 
-const LINKS: { name: string; handle: string; icon: IconType }[] = [
-  {
-    name: "Gmail",
-    handle: "iamrenda.dev[at]gmail.com",
-    icon: SiGmail,
-  },
-  {
-    name: "LinkedIn",
-    handle: "in/iamrenda",
-    icon: FaLinkedin,
-  },
-  {
-    name: "Wantedly",
-    handle: "id/iamrenda",
-    icon: SiWantedly,
-  },
-  {
-    name: "GitHub",
-    handle: "@iamrenda",
-    icon: SiGithub,
-  },
-];
+const LINKS: { name: string; handle: string; href: string; icon: IconType }[] =
+  [
+    {
+      name: "Gmail",
+      handle: "iamrenda.dev[at]gmail.com",
+      href: "mailto:iamrenda.dev@gmail.com",
+      icon: SiGmail,
+    },
+    {
+      name: "LinkedIn",
+      handle: "in/iamrenda",
+      href: "https://www.linkedin.com/in/iamrenda",
+      icon: FaLinkedin,
+    },
+    {
+      name: "Wantedly",
+      handle: "id/iamrenda",
+      href: "https://www.wantedly.com/id/iamrenda",
+      icon: SiWantedly,
+    },
+    {
+      name: "GitHub",
+      handle: "@iamrenda",
+      href: "https://github.com/iamrenda",
+      icon: SiGithub,
+    },
+  ];
 
 export default function Contact() {
   return (
@@ -40,11 +45,14 @@ export default function Contact() {
         </div>
 
         <ul className="border-tint self-end border-t">
-          {LINKS.map(({ name, handle, icon: Icon }) => (
+          {LINKS.map(({ name, handle, href, icon: Icon }) => (
             <li key={name} className="border-tint border-b">
-              <button
-                type="button"
-                className="group relative flex w-full cursor-pointer items-center gap-8 overflow-hidden px-4 py-6 text-left"
+              <a
+                href={href}
+                {...(href.startsWith("http")
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className="group relative flex w-full items-center gap-8 overflow-hidden px-4 py-6 text-left"
               >
                 <span
                   aria-hidden
@@ -64,7 +72,7 @@ export default function Contact() {
                   aria-hidden
                   className="text-ink relative shrink-0 transition-colors duration-300 group-hover:text-white"
                 />
-              </button>
+              </a>
             </li>
           ))}
         </ul>
