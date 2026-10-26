@@ -1,15 +1,17 @@
 import Image from "next/image";
 import { LuArrowRight, LuArrowUpRight } from "react-icons/lu";
+import HeadingText from "./util/HeadingText";
+import PrimaryButton from "./util/PrimaryButton";
 
-function DetailButton({ className }: { className: string }) {
+function DetailButton({ color }: { color: "dark" | "light" }) {
   return (
-    <span
-      aria-hidden
-      className={`absolute right-7 bottom-7 flex items-center gap-2 px-4 py-2 text-xs font-semibold opacity-0 transition-opacity duration-200 group-focus-within:opacity-100 group-hover:opacity-100 motion-reduce:transition-none ${className}`}
-    >
-      詳しく見る
-      <LuArrowUpRight size={14} aria-hidden />
-    </span>
+    <PrimaryButton
+      text="詳しく見る"
+      icon={LuArrowUpRight}
+      color={color}
+      size="sm"
+      className="absolute right-7 bottom-7 opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 motion-reduce:transition-none"
+    />
   );
 }
 
@@ -23,7 +25,7 @@ function Cover({ src, alt, fade }: { src: string; alt: string; fade: string }) {
         sizes="(min-width: 768px) 66vw, 100vw"
         className="object-cover"
       />
-      <div className={`absolute inset-0 bg-gradient-to-t ${fade}`} />
+      <div className={`absolute inset-0 bg-linear-to-t ${fade}`} />
     </>
   );
 }
@@ -33,15 +35,10 @@ const FADE_LIGHT = "from-white/60 via-white/10 to-transparent";
 const REVEAL =
   "max-h-0 overflow-hidden opacity-0 transition-all duration-300 motion-reduce:transition-none group-focus-within:max-h-40 group-focus-within:opacity-100 group-hover:max-h-40 group-hover:opacity-100";
 
-const LIGHT = "bg-ink text-white";
-const DARK = "bg-white text-ink";
-
 export default function Projects() {
   return (
     <section id="projects" className="bg-white px-12 pt-32 pb-24">
-      <h2 className="font-display text-ink mb-10 text-[160px] leading-none uppercase">
-        Projects
-      </h2>
+      <HeadingText text="Projects" />
 
       <div className="grid grid-cols-3 gap-4">
         <article
@@ -64,7 +61,7 @@ export default function Projects() {
               React Native (Expo) · TypeScript · Node.js · PostgreSQL
             </p>
           </div>
-          <DetailButton className={LIGHT} />
+          <DetailButton color="dark" />
         </article>
 
         <article
@@ -87,7 +84,7 @@ export default function Projects() {
               React, TypeScript, Tailwind CSS
             </p>
           </div>
-          <DetailButton className={LIGHT} />
+          <DetailButton color="dark" />
         </article>
 
         <article
@@ -110,7 +107,7 @@ export default function Projects() {
               React · TypeScript · FastAPI · PostgreSQL · Google Vertex AI
             </p>
           </div>
-          <DetailButton className={LIGHT} />
+          <DetailButton color="dark" />
         </article>
 
         <article
@@ -133,7 +130,7 @@ export default function Projects() {
               React · Vite · Zustand
             </p>
           </div>
-          <DetailButton className={DARK} />
+          <DetailButton color="light" />
         </article>
 
         <a

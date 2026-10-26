@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import HeadingText from "./util/HeadingText";
 
 type Panel = {
   label: string;
@@ -56,9 +57,7 @@ export default function AboutMe() {
 
   return (
     <section id="about" className="bg-white px-12 pt-16 pb-32">
-      <h2 className="font-display text-ink mb-8 text-[160px] leading-none uppercase">
-        About Me
-      </h2>
+      <HeadingText text="About Me" />
 
       <p className="text-ink text-6xl leading-tight font-bold tracking-tight">
         <span className="text-accent">渡部 廉</span>、19歳。

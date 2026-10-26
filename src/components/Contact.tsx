@@ -2,6 +2,7 @@ import type { IconType } from "react-icons";
 import { FaLinkedin } from "react-icons/fa6";
 import { LuArrowUpRight } from "react-icons/lu";
 import { SiGithub, SiGmail, SiWantedly } from "react-icons/si";
+import HeadingText from "./util/HeadingText";
 
 const LINKS: { name: string; handle: string; href: string; icon: IconType }[] =
   [
@@ -36,9 +37,7 @@ export default function Contact() {
     <section id="contact" className="bg-white px-12 pt-16 pb-32">
       <div className="grid grid-cols-[4fr_6fr] gap-16">
         <div>
-          <h2 className="font-display text-ink mb-4 text-[160px] leading-none uppercase">
-            Contact
-          </h2>
+          <HeadingText text="Contact" />
           <p className="text-md leading-[2] text-slate-500">
             インターンや開発のご依頼、勉強会のお誘いなどお待ちしています。
           </p>

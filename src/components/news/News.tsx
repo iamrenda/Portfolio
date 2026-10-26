@@ -6,6 +6,8 @@ import { LuArrowRight } from "react-icons/lu";
 import { NEWS_CATEGORIES, type NewsCategory } from "@/types/NewsCategories";
 import NewsFilter from "./NewsFilter";
 import NewsList from "./NewsList";
+import HeadingText from "../util/HeadingText";
+import PrimaryButton from "../util/PrimaryButton";
 
 const NEWS: News[] = [
   {
@@ -43,9 +45,7 @@ export default function News() {
 
   return (
     <section id="news" className="bg-white px-12 pt-16 pb-32">
-      <h2 className="font-display text-ink mb-10 text-[160px] leading-none uppercase">
-        News
-      </h2>
+      <HeadingText text="News" />
 
       <div className="grid grid-cols-[20rem_1fr] gap-16">
         <NewsFilter categories={categories} setCategories={setCategories} />
@@ -62,13 +62,7 @@ export default function News() {
       </div>
 
       <div className="mt-16 flex justify-center">
-        <button
-          type="button"
-          className="bg-ink hover:bg-accent flex cursor-pointer items-center gap-3 px-8 py-4 text-sm font-semibold text-white transition-colors duration-200"
-        >
-          すべてのニュースを見る
-          <LuArrowRight size={16} aria-hidden />
-        </button>
+        <PrimaryButton text="すべてのニュースを見る" icon={LuArrowRight} />
       </div>
     </section>
   );
