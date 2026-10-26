@@ -137,17 +137,17 @@ export default function News() {
               })}
             </ul>
           )}
-
-          <div className="mt-12 flex justify-center">
-            <button
-              type="button"
-              className="bg-ink hover:bg-accent flex cursor-pointer items-center gap-3 px-8 py-4 text-sm font-semibold text-white transition-colors duration-200"
-            >
-              すべてのニュースを見る
-              <LuArrowRight size={16} aria-hidden />
-            </button>
-          </div>
         </div>
+      </div>
+
+      <div className="mt-16 flex justify-center">
+        <button
+          type="button"
+          className="bg-ink hover:bg-accent flex cursor-pointer items-center gap-3 px-8 py-4 text-sm font-semibold text-white transition-colors duration-200"
+        >
+          すべてのニュースを見る
+          <LuArrowRight size={16} aria-hidden />
+        </button>
       </div>
     </section>
   );
