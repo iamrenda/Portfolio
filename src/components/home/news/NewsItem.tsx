@@ -1,10 +1,16 @@
 import { LuArrowRight } from "react-icons/lu";
-import { CATEGORY_LABELS } from "@/const/news/CategoryLabels";
 import { type News } from "@/types/News";
-import SecondaryButton from "../util/SecondaryButton";
+import SecondaryButton from "@/components/util/SecondaryButton";
+import { NewsCategory } from "@/const/NewsCategories";
 
 type Props = {
   newsItem: News;
+};
+
+const NewsCategoriesLabels: Record<NewsCategory, string> = {
+  Project: "プロジェクト",
+  Article: "ニュース",
+  Certification: "資格",
 };
 
 const NewsItem = ({ newsItem }: Props) => {
@@ -22,7 +28,7 @@ const NewsItem = ({ newsItem }: Props) => {
 
       <div className="min-w-0 flex-1">
         <span className="bg-ink inline-block px-2 py-1 text-[10px] font-semibold tracking-wider text-white">
-          {CATEGORY_LABELS[category]}
+          {NewsCategoriesLabels[category]}
         </span>
         <h3 className="text-ink mt-2 text-2xl leading-snug font-bold">
           {title}

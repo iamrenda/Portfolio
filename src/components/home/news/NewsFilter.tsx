@@ -1,5 +1,5 @@
 import { LuCheck } from "react-icons/lu";
-import { NEWS_CATEGORIES, NewsCategory } from "@/types/NewsCategories";
+import { NewsCategories, NewsCategory } from "@/const/NewsCategories";
 
 const CATEGORY_LABELS: Record<NewsCategory, string> = {
   Project: "プロジェクト",
@@ -13,7 +13,7 @@ type Props = {
 };
 
 const NewsFilter = ({ categories, setCategories }: Props) => {
-  const reset = () => setCategories([...NEWS_CATEGORIES]);
+  const reset = () => setCategories([...NewsCategories]);
 
   const toggleCategory = (c: NewsCategory) =>
     setCategories((prev) =>
@@ -25,7 +25,7 @@ const NewsFilter = ({ categories, setCategories }: Props) => {
       <fieldset>
         <legend className="sr-only">カテゴリー</legend>
         <ul className="flex flex-col gap-5">
-          {NEWS_CATEGORIES.map((c) => (
+          {NewsCategories.map((c) => (
             <li key={c}>
               <label className="text-ink flex cursor-pointer items-center gap-3 text-base font-semibold">
                 <input

@@ -1,4 +1,4 @@
-import { type NewsCategory } from "@/types/NewsCategories";
+import { type NewsCategory } from "@/const/NewsCategories";
 
 export type News = {
   category: NewsCategory;

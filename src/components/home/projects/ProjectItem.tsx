@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
-import PrimaryButton from "../util/PrimaryButton";
+import PrimaryButton from "../../util/PrimaryButton";
 
 type Color = "dark" | "light";
 

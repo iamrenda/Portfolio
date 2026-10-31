@@ -1,4 +1,4 @@
-import HeadingText from "../util/HeadingText";
+import HeadingText from "../../util/HeadingText";
 import ProjectItem from "./ProjectItem";
 import ViewAllButton from "./ViewAllButton";
 

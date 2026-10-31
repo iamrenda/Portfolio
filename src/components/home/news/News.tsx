@@ -3,11 +3,11 @@
 import { type News } from "@/types/News";
 import { useMemo, useState } from "react";
 import { LuArrowRight } from "react-icons/lu";
-import { NEWS_CATEGORIES, type NewsCategory } from "@/types/NewsCategories";
+import { NewsCategories, type NewsCategory } from "@/const/NewsCategories";
 import NewsFilter from "./NewsFilter";
 import NewsList from "./NewsList";
-import HeadingText from "../util/HeadingText";
-import PrimaryButton from "../util/PrimaryButton";
+import HeadingText from "@/components/util/HeadingText";
+import PrimaryButton from "@/components/util/PrimaryButton";
 
 const NEWS: News[] = [
   {
@@ -35,7 +35,7 @@ const NEWS: News[] = [
 
 export default function News() {
   const [categories, setCategories] = useState<NewsCategory[]>([
-    ...NEWS_CATEGORIES,
+    ...NewsCategories,
   ]);
 
   const filteredNews = useMemo(
