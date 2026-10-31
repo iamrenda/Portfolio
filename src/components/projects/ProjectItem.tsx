@@ -6,7 +6,7 @@ type Props = {
   project: Project;
 };
 
-export default function ProjectRow({ project }: Props) {
+export default function ProjectItem({ project }: Props) {
   const { title, description, tags, src, alt } = project;
 
   return (

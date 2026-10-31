@@ -4,13 +4,16 @@ import { LuArrowUpRight } from "react-icons/lu";
 interface Props {
   label: string;
   linkTo: string;
+  newTab?: boolean;
 }
 
-const ProjectAnchor = ({ label, linkTo }: Props) => {
+const ProjectAnchor = ({ label, linkTo, newTab }: Props) => {
   return (
     <Link
       href={linkTo}
       className="text-ink hover:text-accent border-ink/30 inline-flex items-center gap-1 border-b pb-0.5 text-xs font-semibold transition-colors duration-200"
+      target={newTab ? "_blank" : undefined}
+      rel={newTab ? "noopener noreferrer" : undefined}
     >
       {label}
       <LuArrowUpRight size={12} aria-hidden />

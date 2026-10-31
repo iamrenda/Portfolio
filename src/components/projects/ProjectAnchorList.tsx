@@ -11,10 +11,15 @@ const ProjectAnchorList = ({ project }: Props) => {
   return (
     <div className="mt-5 flex gap-6">
       <ProjectAnchor label="詳細をみる" linkTo={`/projects/${slug}`} />
-      {github && <ProjectAnchor label="GitHub" linkTo={github} />}
-      {demo && <ProjectAnchor label="デモ" linkTo={demo} />}
+      {github && <ProjectAnchor label="GitHub" linkTo={github} newTab />}
+      {demo && <ProjectAnchor label="デモ" linkTo={demo} newTab />}
       {otherLinks?.map((link, index) => (
-        <ProjectAnchor key={index} label={link.label} linkTo={link.url} />
+        <ProjectAnchor
+          key={index}
+          label={link.label}
+          linkTo={link.url}
+          newTab
+        />
       ))}
     </div>
   );
