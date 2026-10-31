@@ -7,7 +7,7 @@ const ITEMS = ["Projects", "News", "About Me", "Contact"];
 
 type Phase = "closed" | "open" | "closing";
 
-const PANEL_CLASS: Record<Phase, string> = {
+const PanelClasses: Record<Phase, string> = {
   closed: "invisible",
   open: "animate-menu-in",
   closing: "animate-menu-out",
@@ -26,13 +26,13 @@ export default function SiteMenu() {
             setPhase("closed");
           }
         }}
-        className={`fixed inset-y-0 right-0 z-20 w-1/2 ${PANEL_CLASS[phase]}`}
+        className={`fixed inset-y-0 right-0 z-20 flex w-1/2 items-center justify-end pr-14 ${PanelClasses[phase]}`}
       >
         <div
           aria-hidden
           className="absolute inset-0 bg-white/60 [mask-image:linear-gradient(to_right,transparent,black_84%)] backdrop-blur-2xl"
         />
-        <ul className="font-display text-ink absolute top-1/2 right-14 -translate-y-1/2 space-y-4 text-right text-[120px] leading-none tracking-tight uppercase">
+        <ul className="font-display text-ink relative space-y-4 text-right text-[120px] leading-none tracking-tight uppercase">
           {ITEMS.map((item, i) => (
             <li
               key={item}
